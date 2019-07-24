@@ -1,0 +1,29 @@
+.mat-card{
+    background-color: #eee;
+    .mat-card-content{
+        .search, .paginator{
+            background-color: white;
+            padding: 10px 20px;
+            box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);
+        }
+        .mat-table{
+            width: 100%;
+        }
+    }
+}
+.mat-list-item-ripple{
+    position: relative;
+    .btn{
+        position: absolute;
+        right: 0;
+    }
+}
+.example-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .example-container > * {
+    width: 100%;
+  }
+

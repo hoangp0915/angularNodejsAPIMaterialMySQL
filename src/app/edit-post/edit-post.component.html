@@ -1,0 +1,26 @@
+<mat-card *ngIf="post">
+        <mat-card-header>
+            <mat-card-title>{{post.title}} Detail</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="example-container">
+                <mat-form-field hintLabel="Max 200 characters">
+                    <input matInput #title maxlength="200" placeholder="Title" [(ngModel)]="post.title">
+                    <mat-hint align="end">{{title.value?.length || 0}}/200</mat-hint>
+                </mat-form-field>
+                <mat-form-field hintLabel="Max 1000 characters">
+                    <input matInput #description maxlength="1000" placeholder="Description" [(ngModel)]="post.description">
+                    <mat-hint align="end">{{description.value?.length || 0}}/1000</mat-hint>
+                </mat-form-field>
+                <div class="mt-2 float-right">
+                    <button mat-raised-button color="primary" class="mr-2" (click)="onBack()">
+                        <mat-icon>arrow_back</mat-icon> Back
+                    </button>
+                    <button mat-raised-button color="primary"
+                        (click)="save(title.value,description.value); title.value=''; description.value=''">
+                        <mat-icon>save</mat-icon> SAVE
+                    </button>
+                </div>
+            </div>
+        </mat-card-content>
+    </mat-card>
