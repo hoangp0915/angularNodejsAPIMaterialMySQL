@@ -38,3 +38,6 @@ CREATE TABLE `nodemysql`.`posts` (
   `description` VARCHAR(255) NOT NULL,
   `date` TIMESTAMP NULL,
   PRIMARY KEY (`id`));
+
+## Run nodejs : node app
+## Run angular: ng serve --open
